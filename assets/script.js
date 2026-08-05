@@ -28,6 +28,19 @@ flecheGauche.addEventListener("click", function() {
 	console.log("clic sur la flèche gauche");
 });
 
-flecheDroite.addEventListener("click", function() {
+flecheDroite.addEventListener("click", function(event) {
 	console.log("clic sur la flèche droite");
 });
+
+const dotsContainer = document.querySelector(".dots");
+
+for (let i = 0; i < slides.length; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    if (i === 0) {
+        dot.classList.add("dot_selected");
+    }
+
+    dotsContainer.appendChild(dot);
+}
