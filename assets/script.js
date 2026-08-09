@@ -17,21 +17,11 @@ const slides = [
 	}
 ]
 
-
-
+// Sélection des éléments flèches de la page
 const flecheGauche = document.querySelector(".arrow_left");
-console.log(flecheGauche);
 const flecheDroite = document.querySelector(".arrow_right");
-console.log(flecheDroite);
 
-flecheGauche.addEventListener("click", function() {
-	console.log("clic sur la flèche gauche");
-});
-
-flecheDroite.addEventListener("click", function(event) {
-	console.log("clic sur la flèche droite");
-});
-
+// Création des points de navigation
 const dotsContainer = document.querySelector(".dots");
 
 for (let i = 0; i < slides.length; i++) {
@@ -44,3 +34,33 @@ for (let i = 0; i < slides.length; i++) {
 
     dotsContainer.appendChild(dot);
 }
+
+
+//Click gauche et droite pour changer de slide
+function afficherSlide() {
+    const image = document.querySelector(".banner-img");
+    const texte = document.querySelector("#banner p");
+    const dots = document.querySelectorAll(".dot");
+
+    image.src = "./assets/images/slideshow/" + slides[currentSlide].image;
+    texte.innerHTML = slides[currentSlide].tagLine;
+    dots.forEach(dot => {
+        dot.classList.remove("dot_selected");
+    });
+
+    dots[currentSlide].classList.add("dot_selected");
+}
+
+flecheDroite.addEventListener("click", function () {
+    console.log("clic sur la flèche droite");
+    currentSlide++;
+    afficherSlide();
+});
+
+flecheGauche.addEventListener("click", function () {
+    console.log("clic sur la flèche gauche");
+    currentSlide--;
+    afficherSlide();
+});
+
+let currentSlide = 0;
