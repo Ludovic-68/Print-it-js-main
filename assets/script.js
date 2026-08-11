@@ -35,10 +35,8 @@ for (let i = 0; i < slides.length; i++) {
     dotsContainer.appendChild(dot);
 }
 
-
-//Click gauche et droite pour changer de slide
-
 let currentSlide = 0;
+
 
 function afficherSlide() {
     const image = document.querySelector(".banner-img");
@@ -54,6 +52,7 @@ function afficherSlide() {
     dots[currentSlide].classList.add("dot_selected");
 }
 
+//Click gauche et droite pour changer de slide
 flecheDroite.addEventListener("click", function () {
     console.log("clic sur la flèche droite");
     currentSlide++;
