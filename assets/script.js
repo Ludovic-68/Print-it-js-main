@@ -37,6 +37,9 @@ for (let i = 0; i < slides.length; i++) {
 
 
 //Click gauche et droite pour changer de slide
+
+let currentSlide = 0;
+
 function afficherSlide() {
     const image = document.querySelector(".banner-img");
     const texte = document.querySelector("#banner p");
@@ -54,13 +57,15 @@ function afficherSlide() {
 flecheDroite.addEventListener("click", function () {
     console.log("clic sur la flèche droite");
     currentSlide++;
+    if (currentSlide >= slides.length)
+        { currentSlide = 0; }
     afficherSlide();
 });
 
 flecheGauche.addEventListener("click", function () {
     console.log("clic sur la flèche gauche");
     currentSlide--;
+    if (currentSlide < 0)
+        { currentSlide = slides.length - 1; }
     afficherSlide();
 });
-
-let currentSlide = 0;
