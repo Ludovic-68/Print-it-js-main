@@ -99,6 +99,8 @@ header {
 	border-radius: 5px;
 	color: white;
 	text-decoration: none;
+	display: inline-block;
+    white-space: nowrap;
 }
 .devis {
 	background-color: var(--secondary-color);
@@ -178,7 +180,6 @@ header {
 	padding-left:2em;
 	width: 65%;
 	margin-bottom: 1em;
-
 }
 
 #products {
@@ -192,9 +193,7 @@ header {
 #products div {
 	padding: 0 6em;
 }
-#products h2 {
-	margin-top: 0;
-}
+
 .bg-yellow {
 	background-color: var(--third-color);
 }
@@ -246,7 +245,7 @@ header {
 
 
 #contact .container {
-	flex-direction: row;
+	flex-direction: column;
 	display: flex;
 	padding: 6em ;
 }
@@ -290,8 +289,19 @@ footer div {
 
 }
 
-@media all and (max-width: 1250px) {
+@media all and (max-width: 1200px) {
 	#contact > article {
 		flex: 2;
 	}
+}
+
+@media (max-width: 1000px) {
+    #about-us, #products {
+        flex-direction: column-reverse;
+    }
+	footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }

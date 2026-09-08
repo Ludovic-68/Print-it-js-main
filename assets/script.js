@@ -31,7 +31,6 @@ for (let i = 0; i < slides.length; i++) {
     if (i === 0) {
         dot.classList.add("dot_selected");
     }
-
     dotsContainer.appendChild(dot);
 }
 
