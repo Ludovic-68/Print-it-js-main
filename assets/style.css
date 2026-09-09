@@ -309,4 +309,8 @@ img {
         align-items: center;
         text-align: center;
     }
-}
+	#contact .container {
+		flex-direction: column;
+		padding: 1em;
+	}
+}	
