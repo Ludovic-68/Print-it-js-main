@@ -31,6 +31,13 @@ for (let i = 0; i < slides.length; i++) {
     if (i === 0) {
         dot.classList.add("dot_selected");
     }
+
+// Rend le dot cliquable : clic = aller directement à cette slide
+    dot.addEventListener("click", function () {
+        currentSlide = i;
+        afficherSlide();
+    });
+
     dotsContainer.appendChild(dot);
 }
 
