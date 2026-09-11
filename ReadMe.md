@@ -36,11 +36,10 @@ Site web statique en HTML, CSS et JavaScript pour une imprimerie fictive "Print 
 
 ## Points d'amélioration
 
-- améliorer la responsivité mobile du site 1
+
 - ajouter une navigation fixe ou des liens d'ancrage pour accéder rapidement aux sections 4
 - éventuellement remplacer les liens `mailto:` par un formulaire de contact fonctionnel 6 (ouvrir un compte sur Emailjs)
 - renommer `ReadMe.md` en `README.md` si vous voulez une meilleure compatibilité avec GitHub 5
-- Rendre les dots actif 2
 - Optimisation du code, une seule fonction pour flêche droite et gauche (savoir si l'evenement viens de gauche ou de droite) 3
 - +++ SEO Lighthouse
  

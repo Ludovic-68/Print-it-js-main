@@ -92,6 +92,28 @@ header {
 	margin-block: 10px;
 }
 
+.main-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: clamp(0.8em, 2vw, 2em);
+}
+.main-nav a {
+	font-family: Roboto, sans-serif;
+	font-weight: 700;
+	font-size: clamp(13px, 1.4vw, 15px);
+	color: #28363D;
+	text-decoration: none;
+	padding-block: 4px;
+	white-space: nowrap;
+	
+}
+
+header .btn.devis {
+	font-size: clamp(12px, 1.3vw, 16px);
+	padding: clamp(8px, 1.6vw, 16px)
+}
+
 .btn {
 	background-color: var(--primary-color) ;
 	padding: 16px 32px;
